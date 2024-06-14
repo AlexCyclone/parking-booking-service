@@ -1,0 +1,13 @@
+spring:
+  kafka:
+    bootstrap-servers:
+      - ${env.kafka.bootstrap.host}:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+kafka:
+  reservation-topic:
+    name: parking-spot-reserved
+    partitions-count: 1
+    replication-factor: 1

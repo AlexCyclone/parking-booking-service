@@ -1,0 +1,25 @@
+server.port: 8020
+spring:
+  jpa:
+    show-sql: true
+eureka:
+  client:
+    enabled: false
+
+env:
+  postgres:
+    host: user-postgres
+  eureka:
+    host: localhost
+  kafka:
+    bootstrap:
+      host: localhost
+
+parking:
+  parking-name: Local Parking
+  address:
+    country-code: UA
+    city: Kyiv
+    address-string: Heroiv ave. 1
+  parameters:
+    spot-count: 120

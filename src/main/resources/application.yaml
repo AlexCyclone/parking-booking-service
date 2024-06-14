@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: booking-service
+  datasource:
+    url: jdbc:postgresql://${env.postgres.host}:5432/parking_db
+    username: ${env.postgres.username}
+    password: ${env.postgres.password}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: booking
+  flyway:
+    default-schema: booking
+    create-schemas: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${env.eureka.host}:8761/eureka/
+security:
+  open-endpoints:
+    - /actuator/**
+    - /api-docs/**
+    - /swagger-ui/**
+  jwt:
+    secret-key: ${env.jwt.secret}
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    path: /api-docs

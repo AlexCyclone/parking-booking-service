@@ -1,0 +1,8 @@
+parking:
+  parking-name: Local Parking
+  address:
+    country-code: UA
+    city: Kyiv
+    address-string: Heroiv ave. 1
+  parameters:
+    spot-count: 120

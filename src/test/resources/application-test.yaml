@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    show-sql: true
+eureka:
+  client:
+    enabled: false
+
+env:
+  jwt:
+    secret: JWT_SECRET_LONGER_THAN_256_BITS_PLACEHOLDER
+    expiration: 86400
+
+parking:
+  parking-name: Local Parking
+  address:
+    country-code: UA
+    city: Kyiv
+    address-string: Heroiv ave. 1
+  parameters:
+    spot-count: 120
