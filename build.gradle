@@ -26,6 +26,7 @@ ext {
     set('jsonwebtokenVersion', "0.12.5")
     set('hypersistenceVersion', "3.7.6")
     set('springdocVersion', "2.5.0")
+    set('mockKVersion', "1.13.11")
 }
 
 dependencies {
@@ -52,6 +53,7 @@ dependencies {
     testImplementation "org.testcontainers:junit-jupiter"
     testImplementation "org.testcontainers:postgresql"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit5"
+    testImplementation "io.mockk:mockk:${mockKVersion}"
     testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }
 
@@ -91,7 +93,7 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             limit {
-                minimum = 0.1
+                minimum = 0.7
             }
         }
     }

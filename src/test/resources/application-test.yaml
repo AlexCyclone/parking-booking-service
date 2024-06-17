@@ -7,7 +7,6 @@ eureka:
 
 env:
   jwt:
-    secret: JWT_SECRET_LONGER_THAN_256_BITS_PLACEHOLDER
     expiration: 86400
 
 parking:
@@ -17,4 +16,4 @@ parking:
     city: Kyiv
     address-string: Heroiv ave. 1
   parameters:
-    spot-count: 120
+    spot-count: 10
